@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <ViewStub
+        android:id="@+id/vsSwipeCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:inflatedId="@+id/vsSwipeCard"
+        android:layout="@layout/view_swipe_card" />
+
+    <ImageButton
+        android:id="@+id/btnRefresh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ic_reload" />
+    <TextView
+        android:id="@+id/tvPageNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sayfa 1"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:textColor="@color/design_default_color_secondary_variant"
+        android:padding="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/llBottomPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_item_style"
+            android:text="Önceki Sayfa"
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/fragment_item_style"
+            android:text="Sonraki Sayfa"
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>
